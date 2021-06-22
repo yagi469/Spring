@@ -18,4 +18,12 @@ public class JavaConfig {
     UserService userService {
         return new UserServiceImpl(userRepository(), passwordEncoder());
     }
+    
+    // メソッド引数経由でBeanを注入する実装例
+    /*
+     * @Bean
+     * UserService userService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+     *     return new UserServiceImpl(userRepository, passwordEncoder);
+     * }
+     */
 }
